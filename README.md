@@ -1,13 +1,12 @@
 # basket-mini-app
 
-Here is a simple basket app, it shows products that come from request responses.
-Then you can add to your cart, you can update quantity, and delete products from the cart.
+This is a simple basket app that displays products fetched from a request response. You can add items to your cart, update their quantity, and remove products from the cart.
 
 ## Installation
 
 ### Installation with Docker
 
-In the project files, when you run this code in the terminal, the project will run as a production.
+To run the project as a production build, use the following commands in the terminal from the project files:
 
 ```
 docker build -t basket-app. && docker run -it -p 8080:8080 basket-app
@@ -15,19 +14,23 @@ docker build -t basket-app. && docker run -it -p 8080:8080 basket-app
 
 ### Installation with Yarn
 
+To install the app with yarn, run:
+
 ```
 yarn install
 ```
 
-#### Run with yarn
+#### Running with yarn
+
+To run the app with yarn, run:
 
 ```
 yarn serve
 ```
 
-#### Run with Yarn & Docker
+#### Running with Yarn & Docker
 
-It's a script for a run docker with yarn.
+To run the app with Yarn and Docker, use the following script:
 
 ```
 yarn docker
@@ -35,15 +38,15 @@ yarn docker
 
 ## Unit Test
 
-Unit test is written with jest, you can run this command to see test results:
+The app includes unit tests written with Jest. To view the test results, run the following command:
 
 ```
 yarn test:unit
 ```
 
-## Lints and fixes files
+## Linting and Fixing Files
 
-Linter is an eslint, you can fix files with codes.
+The app uses ESLint for linting. To fix files with code, run:
 
 ```
 yarn lint
