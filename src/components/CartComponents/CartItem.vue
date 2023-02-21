@@ -22,12 +22,17 @@
       </button>
     </div>
   </div>
+  <Toast v-if="showToast" :message="toastMessage" :type="toastType" />
 </template>
 
 <script>
+import Toast from '../Toast.vue';
 import { mapActions } from 'vuex';
 
 export default {
+  components: {
+    Toast,
+  },
   data() {
     return {
       quantity: this.product.quantity,
