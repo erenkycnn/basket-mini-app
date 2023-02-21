@@ -49,7 +49,11 @@ export default {
   },
   mounted() {
     this.$watch('quantity', (newQuantity) => {
-      this.updateCartItemQuantity({ productId: this.product.id, quantity: newQuantity });
+      this.updateCartItemQuantity({
+        productId: this.product.id,
+        quantity: newQuantity,
+      });
+      console.log('calisti');
       this.showToast = true;
       // eslint-disable-next-line max-len
       this.toastMessage = `${this.product.name}'s quantity has been updated to ${newQuantity}`;
