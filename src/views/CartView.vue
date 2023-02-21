@@ -1,5 +1,22 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
+  <CartList :cartProducts="cartProducts" :cartTotalPrice="cartTotalPrice" />
 </template>
+
+<script>
+import CartList from '@/components/CartComponents/CartList.vue';
+
+export default {
+  components: {
+    CartList,
+  },
+  computed: {
+    cartProducts() {
+      const cartProducts = this.$store.getters.cartProducts;
+      return cartProducts ? cartProducts : [];
+    },
+    cartTotalPrice() {
+      return this.$store.getters.cartTotalPrice;
+    },
+  },
+};
+</script>
