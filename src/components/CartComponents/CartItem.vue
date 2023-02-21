@@ -53,7 +53,6 @@ export default {
         productId: this.product.id,
         quantity: newQuantity,
       });
-      console.log('calisti');
       this.showToast = true;
       // eslint-disable-next-line max-len
       this.toastMessage = `${this.product.name}'s quantity has been updated to ${newQuantity}`;
