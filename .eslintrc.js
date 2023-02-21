@@ -23,5 +23,6 @@ module.exports = {
     'no-async-promise-executor': 'off',
     'no-empty': 'off',
     'max-len': ['error', { code: 90 }],
+    'vue/multi-word-component-names': 'off',
   },
 };
