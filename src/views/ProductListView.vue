@@ -1,6 +1,6 @@
 <template>
   <div>
-    <ProductList :products="products" />
+    <ProductList :products="products" @add-to-cart="handleAddToCart" />
   </div>
 </template>
 
@@ -23,7 +23,15 @@ export default {
     }
   },
   methods: {
-    ...mapActions(['fetchProducts']),
+    ...mapActions(['fetchProducts', 'addToCart']),
+    async handleAddToCart({ product, quantity }) {
+      try {
+        await ProductService.addToCart(product.id, quantity);
+        this.addToCart({ product, quantity });
+      } catch (error) {
+        console.log('error', error);
+      }
+    },
   },
 };
 </script>

@@ -6,6 +6,7 @@
       </div>
       <h2 class="product-page__name">{{ product.name }}</h2>
       <div class="product-page__price">{{ formattedPrice }}</div>
+      <button class="product-page__add-to-cart" @click="addToCart">Add to cart</button>
     </div>
   </div>
 </template>
@@ -16,6 +17,11 @@ export default {
     product: {
       type: Object,
       required: true,
+    },
+  },
+  methods: {
+    addToCart() {
+      this.$emit('add-to-cart', { product: this.product, quantity: this.quantity });
     },
   },
   computed: {

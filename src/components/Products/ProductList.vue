@@ -22,8 +22,10 @@ export default {
       required: true,
     },
   },
-  mounted() {
-    console.log('product', this.products);
+  methods: {
+    handleAddToCart({ product, quantity }) {
+      this.$emit('add-to-cart', { product, quantity });
+    },
   },
 };
 </script>
