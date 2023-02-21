@@ -7,7 +7,8 @@
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore --fix src",
-    "format": "prettier .  --write"
+    "format": "prettier .  --write",
+    "docker": "docker build -t basket-app . && docker run -it -p 8080:8080 basket-app"
   },
   "dependencies": {
     "core-js": "^3.8.3",
