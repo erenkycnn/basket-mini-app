@@ -1,24 +1,31 @@
 # basket-mini-app
 
-## Project setup
+Here is a simple basket app, it shows products that come from request responses.
+Then you can add to your cart, you can update quantity, and delete products from the cart.
+
+## Installation
+
+### Installation with Docker
+
+In the project files, when you run this code in the terminal, the project will run.
+
+```
+docker build -t basket-app. && docker run -it -p 8080:8080 basket-app
+```
+
+### Installation with Yarn
 
 ```
 yarn install
 ```
 
-### Compiles and hot-reloads for development
-
 ```
 yarn serve
 ```
 
-### Compiles and minifies for production
+## Unit Test
 
-```
-yarn build
-```
-
-### Run your unit tests
+Unit test is written with jest, you can run this command to see test results:
 
 ```
 yarn test:unit
@@ -26,10 +33,8 @@ yarn test:unit
 
 ### Lints and fixes files
 
+Linter is an eslint, you can fix files with codes.
+
 ```
 yarn lint
 ```
-
-### Customize configuration
-
-See [Configuration Reference](https://cli.vuejs.org/config/).
