@@ -3,7 +3,10 @@
     <div v-if="cartProducts.length === 0">Your cart is empty.</div>
     <div v-else>
       <div v-for="(product, index) in cartProducts" :key="index">
-        <CartItem :product="product" />
+        <CartItem
+          :product="product"
+          @remove-cart-item="this.$emit('remove-cart-item', product)"
+        />
       </div>
       <div class="cart-summary-total">
         <p>Total: {{ cartTotalPrice }} {{ cartProducts[0].currency }}</p>
