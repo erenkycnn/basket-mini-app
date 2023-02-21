@@ -38,12 +38,7 @@ export default {
       try {
         await ProductService.addToCart(product.id, quantity);
         this.addToCart({ product, quantity });
-        this.showToast = true;
-        this.toastMessage = `${quantity} ${product.name} added to cart`;
-        this.toastType = 'success';
-        setTimeout(() => {
-          this.showToast = false;
-        }, 3000);
+        this.$router.push('/cart');
       } catch (error) {
         this.showToast = true;
         this.toastMessage = `${quantity} ${product.name} is out of stock`;
